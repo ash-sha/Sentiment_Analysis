@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/src/mlruns/0/c9cb78b634f04195ac6e55ee641744f2/artifacts
+end_time: 1733174378931
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c9cb78b634f04195ac6e55ee641744f2
+run_name: glamorous-goose-374
+run_uuid: c9cb78b634f04195ac6e55ee641744f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733174374658
+status: 3
+tags: []
+user_id: aswathshakthi

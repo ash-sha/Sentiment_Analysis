@@ -1,0 +1,12 @@
+poetry init on the source folder
+ poetry add package-name # manually or use ## pip install pipreqs ,then , poetry add $(cat requirements.txt | awk -F '==' '{print $1}')
+ poetry update
+
+ while importing new project use "poetry install with the toml and .lock files in place to install dependencies as source"
+ RUN FastAPI server - uvicorn src.server:app --reload
+ 127.0.0.1:8000/docs - for docs . this is how fastapi works.
+ curl http://127.0.0.1:8000/  - gives a response
+ use curl -X POST "http://127.0.0.1:8000/predict" -H "Content-Type: application/json" -d '{"query": "I love this Product"}' to infer / we can also use postman to check
+
+ Docker - set paths as ENV variable then build it , then use docker run -v /Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/data:/app/data -v /Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/models:/app/models sentiment_analysis if run locally
+ docker run -d -p 8000:8000 sentiment-analysis-api

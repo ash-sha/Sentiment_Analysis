@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/src/mlruns/0/88167668597d4acfaba12a71feb47861/artifacts
+end_time: 1733207665451
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 88167668597d4acfaba12a71feb47861
+run_name: wise-colt-47
+run_uuid: 88167668597d4acfaba12a71feb47861
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733207661582
+status: 3
+tags: []
+user_id: aswathshakthi

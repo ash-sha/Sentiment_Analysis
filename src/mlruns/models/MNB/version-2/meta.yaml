@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1733174579056
+current_stage: None
+description: ''
+last_updated_timestamp: 1733174579056
+name: MNB
+run_id: c9cb78b634f04195ac6e55ee641744f2
+run_link: ''
+source: file:///Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/src/mlruns/0/c9cb78b634f04195ac6e55ee641744f2/artifacts/logistic_regression_model
+status: READY
+status_message: null
+storage_location: file:///Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/src/mlruns/0/c9cb78b634f04195ac6e55ee641744f2/artifacts/logistic_regression_model
+user_id: null
+version: 2

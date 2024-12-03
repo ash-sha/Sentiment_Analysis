@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/src/mlruns/0/a7e8b111695e4d8ab6bb34b274924d3c/artifacts
+end_time: 1733171572279
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a7e8b111695e4d8ab6bb34b274924d3c
+run_name: enchanting-shark-216
+run_uuid: a7e8b111695e4d8ab6bb34b274924d3c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733171569940
+status: 3
+tags: []
+user_id: aswathshakthi
