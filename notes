@@ -10,3 +10,10 @@ poetry init on the source folder
 
  Docker - set paths as ENV variable then build it , then use docker run -v /Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/data:/app/data -v /Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/models:/app/models sentiment_analysis if run locally
  docker run -d -p 8000:8000 sentiment-analysis-api
+
+ cd /path/to/your/project       # Navigate to the project folder
+git init                       # Initialize Git
+git remote add origin <repo>   # Add the remote repository
+git add .                      # Stage all files except those in .gitignore
+git commit -m "Initial commit" # Commit changes
+git push -u origin main        # Push to the remote repository
