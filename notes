@@ -17,3 +17,6 @@ git remote add origin <repo>   # Add the remote repository
 git add .                      # Stage all files except those in .gitignore
 git commit -m "Initial commit" # Commit changes
 git push -u origin main        # Push to the remote repository
+
+
+.
