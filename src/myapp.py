@@ -1,6 +1,5 @@
 import requests
 import streamlit as st
-from server import port_no
 import subprocess
 from pathlib import Path
 import atexit
@@ -17,7 +16,7 @@ st.write("""
 ##### Analyze the sentiment of your text in real-time.
 """)
 
-API_URL = f"http://localhost:{port_no}/predict"
+API_URL = "http://localhost:8000/predict"
 
 query = st.text_input("Enter your Sentence:")
 
