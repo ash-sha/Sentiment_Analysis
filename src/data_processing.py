@@ -5,7 +5,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 import nltk
-
+nltk.download('stopwords')
 
 
 def prepare_data(amazon_data_path,amazon_test_path,movie_data_path):
