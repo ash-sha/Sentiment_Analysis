@@ -3,6 +3,8 @@ import streamlit as st
 from pathlib import Path
 from inference import predict_polarity
 import nltk
+import os 
+
 nltk.download('stopwords')
 MODEL_SAVE_PATH = os.getenv('MODEL_SAVE_PATH', '/Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/models/sample_trained_model.pickle')
 
