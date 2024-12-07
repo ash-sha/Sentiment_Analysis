@@ -34,4 +34,3 @@ def predict_sentiment_api(request: SentimentRequest):
 if __name__ == "__main__":
     print(f"access: http://localhost:{port_no}/docs")
     uvicorn.run(app, host="0.0.0.0", port=port_no,log_level='info')
-
