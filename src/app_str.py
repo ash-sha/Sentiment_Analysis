@@ -6,7 +6,7 @@ import nltk
 import os 
 
 nltk.download('stopwords')
-MODEL_SAVE_PATH = os.getenv('MODEL_SAVE_PATH', '/Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/models/sample_trained_model.pickle')
+MODEL_SAVE_PATH = os.getenv('MODEL_SAVE_PATH', 'Sentiment_Analysis/models/sample_trained_model.pickle')
 
 # Add a logo in the sidebar
 logo_path = Path(__file__).parent / "pic.jpeg"
