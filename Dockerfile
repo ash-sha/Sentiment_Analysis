@@ -27,7 +27,7 @@ ENV MODEL_SAVE_PATH=/app/models/sample_trained_model.pickle
 
 
 # Expose the FastAPI app's port
-EXPOSE 8000 8501
+EXPOSE 8000
 
 # Set the entry point to run the server.py inside the src folder
-ENTRYPOINT ["streamlit", "run", "src/myapp.py"]
+ENTRYPOINT ["python","src/server.py"]
