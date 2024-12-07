@@ -2,7 +2,8 @@
 import streamlit as st
 from pathlib import Path
 from inference import predict_polarity
-
+import nltk
+nltk.download('stopwords')
 
 # Add a logo in the sidebar
 logo_path = Path(__file__).parent / "pic.jpeg"
