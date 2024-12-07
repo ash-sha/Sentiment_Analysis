@@ -7,6 +7,8 @@ import nltk
 from data_processing import preprocess_text_nltk
 
 nltk.download('stopwords')
+nltk.download('punkt_tab')
+nltk.download('wordnet')
 
 # Add a logo in the sidebar
 logo_path = Path(__file__).parent / "pic.jpeg"
