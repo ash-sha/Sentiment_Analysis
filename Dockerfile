@@ -30,5 +30,4 @@ ENV MODEL_SAVE_PATH=/app/models/sample_trained_model.pickle
 EXPOSE 8000 8501
 
 # Set the entry point to run the server.py inside the src folder
-ENTRYPOINT ["streamlit", "run", "myapp.py"]
-
+ENTRYPOINT ["streamlit", "run", "src/myapp.py"]
