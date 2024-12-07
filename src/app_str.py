@@ -18,7 +18,7 @@ st.write("""
 """)
 # Function to load the model and vectorizer, and make predictions
 def predict_polarity(user_query: str) -> str:
-    saved_model_dic = pickle.load(open("/Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/models/sample_trained_model.pickle", "rb"))
+    saved_model_dic = pickle.load(open("/models/sample_trained_model.pickle", "rb"))
     saved_clf = saved_model_dic['model']
     saved_vectorizer = saved_model_dic['vectorizer']
 
