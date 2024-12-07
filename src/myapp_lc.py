@@ -1,4 +1,4 @@
-# streamlit app for docker .calls fastapi beforehand.
+# streamlit for local
 
 import requests
 import streamlit as st
