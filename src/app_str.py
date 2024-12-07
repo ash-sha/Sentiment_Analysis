@@ -22,7 +22,7 @@ def predict_polarity(user_query: str) -> str:
     st.write("Current working directory:", os.getcwd())
     st.write("Listing files:", os.listdir('.'))
 
-    saved_model_dic = pickle.load(open("/src/models/sample_trained_model.pickle", "rb"))
+    saved_model_dic = pickle.load(open("/models/sample_trained_model.pickle", "rb"))
     saved_clf = saved_model_dic['model']
     saved_vectorizer = saved_model_dic['vectorizer']
 
