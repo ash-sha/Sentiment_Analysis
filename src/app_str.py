@@ -20,7 +20,7 @@ st.write("""
 def predict_polarity(user_query: str) -> str:
     import os
    
-    model_path = os.path.join(os.getcwd(), 'model', 'sample_trained_model.pickle')
+    model_path = os.path.join(os.getcwd(), 'models', 'sample_trained_model.pickle')
     saved_model_dic = pickle.load(open(model_path, "rb"))
     saved_clf = saved_model_dic['model']
     saved_vectorizer = saved_model_dic['vectorizer']
