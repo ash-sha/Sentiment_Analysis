@@ -48,7 +48,7 @@ INSTRUCTIONS:
 6. Can push the code the docker hub if needed by creating a repository in DockerHub then in terminal run below to upload to DockerHub
        
        docker login
-       docker tag image_name
+       docker tag image_name username/repo:tag
        docker push username/repo:tag
 
 7. Access **mlflow ui** to track and monitor models.
