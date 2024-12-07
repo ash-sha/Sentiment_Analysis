@@ -32,7 +32,7 @@ else:
     ##### Analyze the sentiment of your text in real-time.
     """)
 
-    API_URL = "http://localhost:8000/predict"
+    API_URL = "http://localhost:8005/predict"
     query = st.text_input("Enter your Sentence:")
 
     if st.button("Analyze"):
