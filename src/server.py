@@ -1,14 +1,16 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, constr
+from pydantic import BaseModel
 from fastapi.responses import PlainTextResponse  # Import the PlainTextResponse class
-from inference import predict_polarity  # Import your inference function
+import uvicorn
+from inference import predict_polarity
 
+port_no = 8000
 # Initialize FastAPI
 app = FastAPI(title="Sentiment Analysis API", description="API for sentiment analysis", version="1.0")
 
 # Define request model (only need query)
 class SentimentRequest(BaseModel):
-    query: constr(min_length=1, max_length=512)  # Enforce query length between 1 and 512 characters
+    query: str  # Enforce query length between 1 and 512 characters
 
 # Define response model
 class SentimentResponse(BaseModel):
@@ -29,8 +31,7 @@ def predict_sentiment_api(request: SentimentRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+if __name__ == "__main__":
+    print(f"access: http://localhost:{port_no}/docs")
+    uvicorn.run(app, host="0.0.0.0", port=port_no,log_level='info')
 
-## RUN FastAPI server - uvicorn src.server:app --reload
-## 127.0.0.1:8000/docs - for docs . this is how fastapi works.
-### curl http://127.0.0.1:8000/  - gives a response
-# use curl -X POST "http://127.0.0.1:8000/predict" -H "Content-Type: application/json" -d '{"query": "I love this Product"}' to infer / we can also use postman to check

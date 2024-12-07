@@ -1,9 +1,8 @@
-fastapi==0.115.5
-mlflow==2.18.0
-mlflow_skinny==2.18.0
+fastapi==0.115.6
 nltk==3.9.1
-optuna==4.1.0
 pandas==2.2.3
-pydantic==2.10.2
+pydantic==2.10.3
+Requests==2.32.3
 scikit_learn==1.5.2
-uvicorn~=0.32.1
+streamlit==1.40.2
+uvicorn==0.32.1
