@@ -1,4 +1,4 @@
-# streamlit app for docker .calls fastapi beforehand.
+# used only for streamlit app without fastapi
 
 
 import os
