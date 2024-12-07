@@ -4,7 +4,6 @@ from fastapi.responses import PlainTextResponse  # Import the PlainTextResponse 
 import uvicorn
 from inference import predict_polarity
 
-port_no = 8000
 # Initialize FastAPI
 app = FastAPI(title="Sentiment Analysis API", description="API for sentiment analysis", version="1.0")
 
@@ -33,4 +32,4 @@ def predict_sentiment_api(request: SentimentRequest):
 
 if __name__ == "__main__":
     print(f"access: http://localhost:{port_no}/docs")
-    uvicorn.run(app, host="0.0.0.0", port=port_no,log_level='info')
+    uvicorn.run(app, host="0.0.0.0", port=8000,log_level='info')
