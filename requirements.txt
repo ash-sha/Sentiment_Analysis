@@ -1,0 +1,8 @@
+fastapi==0.115.6
+nltk==3.9.1
+pandas==2.2.3
+pydantic==2.10.3
+Requests==2.32.3
+scikit_learn==1.5.2
+streamlit==1.40.2
+uvicorn==0.32.1

@@ -1,0 +1,37 @@
+ poetry init on the source folder
+ poetry add package-name # manually or use ## pip install pipreqs ,then , poetry add $(cat requirements.txt | awk -F '==' '{print $1}')
+ poetry update
+
+# Git
+cd /path/to/your/project       # Navigate to the project folder
+git init                       # Initialize Git
+git remote add origin <repo>   # Add the remote repository
+git add .                      # Stage all files except those in .gitignore
+git commit -m "Initial commit" # Commit changes
+git push -u origin main        # Push to the remote repository
+
+
+#mlflow
+mlflow ui --port 5000
+
+#fastapi
+ while importing new project use "poetry install with the toml and .lock files in place to install dependencies as source"
+ RUN FastAPI server - uvicorn src.server:app --reload
+ 127.0.0.1:8000/docs - for docs . this is how fastapi works.
+ curl http://127.0.0.1:8000/  - gives a response
+ use curl -X POST "http://127.0.0.1:8000/predict" -H "Content-Type: application/json" -d '{"query": "I love this Product"}' to infer / we can also use postman to check
+
+#Docker
+ Docker - set paths as ENV variable then build it , then use docker run -v /Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/data:/app/data -v /Users/aswathshakthi/PycharmProjects/MLOps/Sentiment_Analysis/models:/app/models sentiment_analysis if run locally
+ docker run -d -p 8000:8000 sentimentanalysis
+ docker login
+ docker tag sentimentanalysis aswaths/sentimentanalysis:tag
+ docker push aswaths/sentimentanalysis:tag
+ docker save -o <output-file-name>.tar <image-name>
+ docker load -i <output-file-name>.tar
+
+
+# deploy
+
+#render url - https://sentiment-analysis-3m74.onrender.com/predict
+#streamlit url - https://sentimentanalysisnpl.streamlit.app

@@ -1,0 +1,10 @@
+data
+.idea
+venv
+__pycache__
+*.pyc
+.venv
+*.log
+.pytest_cache
+.DS_Store
+sentimentanalysis_docker.tar

@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+.git
+.venv
+*.log
+notebooks
+notes
+.idea
+.pytest_cache
+.DS_Store
+data
+tests
