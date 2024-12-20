@@ -31,7 +31,7 @@ quote is escaped by 2 double quotes (""). New lines are escaped by a backslash f
 with an "n" character, that is "\n".
 
 docker image: aswaths/sentimentanalysis
- 
+ streamlit : sentimentanalysisnpl.streamlit.app
 
 INSTRUCTIONS:
 
