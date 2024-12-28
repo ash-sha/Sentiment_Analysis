@@ -1,54 +1,72 @@
-Amazon Review Polarity Dataset
+## Sentiment Analysis on Amazon Review Dataset using MLOps  
 
-source: https://jmcauley.ucsd.edu/data/amazon/
+This project showcases an end-to-end MLOps pipeline for sentiment analysis using the Amazon Review dataset.  
 
-Version 3, Updated 09/09/2015
+### Dataset Overview  
 
-ORIGIN:
+**Source**: [Amazon Review Dataset](https://jmcauley.ucsd.edu/data/amazon/)  
+**Version**: 3 (Updated 09/09/2015)  
 
-The Amazon reviews dataset consists of reviews from amazon. The data span a period of 18 years,
- including ~35 million reviews up to March 2013. Reviews include product and user information, ratings,
- and a plaintext review. For more information, please refer to the following paper: J. McAuley and J. Leskovec.
- Hidden factors and hidden topics: understanding rating dimensions with review text. RecSys, 2013.
+#### Origin  
+The dataset contains Amazon reviews spanning 18 years, including ~35 million reviews up to March 2013. Each review includes product information, user details, ratings, and plaintext review content.  
 
-The Amazon reviews polarity dataset is constructed by Xiang Zhang (xiang.zhang@nyu.edu) from
- the above dataset. It is used as a text classification benchmark in the following paper:
-  Xiang Zhang, Junbo Zhao, Yann LeCun. Character-level Convolutional Networks for
-  Text Classification. Advances in Neural Information Processing Systems 28 (NIPS 2015).
+For more details, refer to:  
+- [J. McAuley and J. Leskovec, RecSys 2013](https://jmcauley.ucsd.edu/data/amazon/): *Hidden factors and hidden topics: understanding rating dimensions with review text*.  
 
+The polarity dataset for this project is constructed by Xiang Zhang as a benchmark for text classification. For more details, refer to:  
+- Xiang Zhang, Junbo Zhao, Yann LeCun, NIPS 2015: *Character-level Convolutional Networks for Text Classification*.  
 
-DESCRIPTION:
+#### Dataset Details  
+- Reviews are classified as **positive** (scores 4 & 5) or **negative** (scores 1 & 2). Neutral reviews (score 3) are excluded.  
+- Each class contains:  
+  - 1,800,000 training samples  
+  - 200,000 testing samples  
 
-The Amazon reviews polarity dataset is constructed by taking review score 1 and 2 as
-negative, and 4 and 5 as positive. Samples of score 3 is ignored. In the dataset, class 1
-is the negative and class 2 is the positive. Each class has 1,800,000 training samples and
-200,000 testing samples.
+**Files**:  
+- `train.csv` and `test.csv` (comma-separated values with the following columns):  
+  - Class index (1 = Negative, 2 = Positive)  
+  - Review title  
+  - Review text  
 
-The files train.csv and test.csv contain all the training samples as comma-sparated values.
-There are 3 columns in them, corresponding to class index (1 or 2), review title and review
-text. The review title and text are escaped using double quotes ("), and any internal double
-quote is escaped by 2 double quotes (""). New lines are escaped by a backslash followed
-with an "n" character, that is "\n".
+**Special Formatting**:  
+- Review title and text are enclosed in double quotes (`"`), and internal double quotes are escaped (`""`).  
+- Newlines are represented as `\n`.  
 
-docker image: aswaths/sentimentanalysis
- streamlit : sentimentanalysisnpl.streamlit.app
+### Deployment  
 
-INSTRUCTIONS:
+- **Docker Image**: `aswaths/sentimentanalysis`  
+- **Streamlit App**: [Streamlit Sentiment Analysis App](https://sentimentanalysisnpl.streamlit.app)  
 
-1. load the data from specified source and drop into data folder
-2. run serve.py to run fastAPI and access from localhost port 8000
-3. localhost:8000/docs proves the API docs
-4. in new terminal write below command to fetch the prediction. change the query to your desired query
+### Instructions  
 
-        curl -X POST "http://localhost:8000/predict" -H "Content-Type: application/json" -d '{"query": "This is a great product!"}'
-5. Additionally, modify the dockerfile if need or run below in terminal,
-       
-       docker build -t image_name .
-       docker run image_name
-6. Can push the code the docker hub if needed by creating a repository in DockerHub then in terminal run below to upload to DockerHub
-       
-       docker login
-       docker tag image_name username/repo:tag
-       docker push username/repo:tag
+1. **Prepare the Dataset**  
+   - Download the dataset and place it in the `data` folder.  
 
-7. Access **mlflow ui** to track and monitor models.
+2. **Run the FastAPI Server**  
+   - Execute `serve.py` to launch the FastAPI server.  
+   - Access API documentation at `http://localhost:8000/docs`.  
+
+3. **Make Predictions**  
+   - Use the following `curl` command to fetch predictions:  
+     ```bash
+     curl -X POST "http://localhost:8000/predict" -H "Content-Type: application/json" -d '{"query": "This is a great product!"}'
+     ```  
+
+4. **Build and Run Docker Image**  
+   - To build the Docker image:  
+     ```bash
+     docker build -t <image_name> .
+     docker run <image_name>
+     ```  
+   - Modify the `Dockerfile` as needed.  
+
+5. **Push to DockerHub**  
+   - Create a DockerHub repository, then upload your image:  
+     ```bash
+     docker login
+     docker tag <image_name> <username>/<repo>:<tag>
+     docker push <username>/<repo>:<tag>
+     ```  
+
+6. **Monitor Models with MLflow**  
+   - Access the MLflow UI to track and monitor model performance.  
